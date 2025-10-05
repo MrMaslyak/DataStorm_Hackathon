@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DATASTORM — Головна</title>
+    <link rel="stylesheet" href="assets/styles/style.css" />
+  </head>
+  <body class="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+    <!-- Hero -->
+    <div class="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-10 h-10 rounded-full bg-white/20"></div>
+          <h1 class="font-extrabold">DATASTORM</h1>
+        </div>
+        <p class="mb-8 opacity-90">NASA Space Apps Challenge 2024</p>
+        <div class="inline-block bg-white/10 backdrop-blur px-6 py-3 rounded-lg border border-white/20">
+          Аналіз глобальних екологічних катастроф
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-12">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="font-extrabold mb-2">3</div>
+            <div class="opacity-90">Досліджені події</div>
+          </div>
+          <div class="text-center">
+            <div class="font-extrabold mb-2">Супутникові дані</div>
+            <div class="opacity-90">SAR, Thermal, Optical</div>
+          </div>
+          <div class="text-center">
+            <div class="font-extrabold mb-2">2023-2024</div>
+            <div class="opacity-90">Період аналізу</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cards section with hover zoom -->
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="hover-zoom shadow-xl">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900" alt="card 1" class="w-full h-full object-cover" />
+          <div class="overlay absolute inset-0 bg-black"></div>
+          <div class="overlay-content absolute inset-x-0 bottom-0 p-6 text-white text-shadow-sm">
+            <h3 class="font-extrabold mb-2">Lorem ipsum</h3>
+            <p>Dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+          </div>
+        </div>
+        <div class="hover-zoom shadow-xl">
+          <img src="https://images.unsplash.com/photo-1493244040629-496f6d136cc3?w=900" alt="card 2" class="w-full h-full object-cover" />
+          <div class="overlay absolute inset-0 bg-black"></div>
+          <div class="overlay-content absolute inset-x-0 bottom-0 p-6 text-white text-shadow-sm">
+            <h3 class="font-extrabold mb-2">Lorem ipsum</h3>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+          </div>
+        </div>
+        <div class="hover-zoom shadow-xl">
+          <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=900" alt="card 3" class="w-full h-full object-cover" />
+          <div class="overlay absolute inset-0 bg-black"></div>
+          <div class="overlay-content absolute inset-x-0 bottom-0 p-6 text-white text-shadow-sm">
+            <h3 class="font-extrabold mb-2">Lorem ipsum</h3>
+            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Map + markers (links) -->
+    <div class="max-w-7xl mx-auto px-6 py-20">
+      <div class="text-center mb-12">
+        <h2 class="font-extrabold mb-4 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+          Виберіть локацію для дослідження
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Натисніть на будь-яку точку на карті, щоб переглянути детальний аналіз супутникових знімків та порівняння до і після катастрофи
+        </p>
+      </div>
+
+      <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+        <div class="aspect-[16/10] bg-gradient-to-br from-slate-800 to-slate-600">
+          <img src="https://images.unsplash.com/photo-1678653091742-e3c0e8ea3657?w=1200" alt="Topographic relief map" class="w-full h-full object-cover" />
+        </div>
+
+        <!-- Event pins -->
+        <a href="event1.html" class="absolute group cursor-pointer" style="top:52%;left:45%">
+          <div class="relative">
+            <div class="absolute inset-0 -m-2"><div class="w-12 h-12 bg-purple-500 rounded-full opacity-75 animate-ping"></div></div>
+            <div class="relative w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg transform transition-transform group-hover:scale-110"></div>
+            <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+              <div class="bg-white rounded-lg shadow-xl p-4 min-w-[250px]">
+                <div class="font-extrabold mb-2 text-gray-900">Нова Каховка</div>
+                <p class="text-gray-600">Аналіз затоплення після руйнування Каховської ГЕС</p>
+                <div class="mt-3 text-purple-600">Натисніть для перегляду →</div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="event2.html" class="absolute group cursor-pointer" style="top:60%;left:62%">
+          <div class="relative">
+            <div class="absolute inset-0 -m-2"><div class="w-12 h-12 bg-purple-500 rounded-full opacity-75 animate-ping"></div></div>
+            <div class="relative w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg transform transition-transform group-hover:scale-110"></div>
+            <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+              <div class="bg-white rounded-lg shadow-xl p-4 min-w-[250px]">
+                <div class="font-extrabold mb-2 text-gray-900">Розлив нафти, Крим</div>
+                <p class="text-gray-600">Екологічна катастрофа - розлив нафти в Чорному морі</p>
+                <div class="mt-3 text-purple-600">Натисніть для перегляду →</div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="event3.html" class="absolute group cursor-pointer" style="top:25%;left:20%">
+          <div class="relative">
+            <div class="absolute inset-0 -m-2"><div class="w-12 h-12 bg-purple-500 rounded-full opacity-75 animate-ping"></div></div>
+            <div class="relative w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center shadow-lg transform transition-transform group-hover:scale-110"></div>
+            <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+              <div class="bg-white rounded-lg shadow-xl p-4 min-w-[250px]">
+                <div class="font-extrabold mb-2 text-gray-900">Пожежа в лісах Квебека</div>
+                <p class="text-gray-600">Масштабна лісова пожежа в Канаді</p>
+                <div class="mt-3 text-purple-600">Натисніть для перегляду →</div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Legend -->
+      <div class="mt-8 flex flex-wrap gap-6 justify-center">
+        <a href="event1.html" class="flex items-center gap-3 bg-white rounded-lg px-6 py-3 shadow-md hover:shadow-lg transition-shadow border border-gray-200 hover:border-purple-300">
+          <div class="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full"></div>
+          <span class="font-medium">Нова Каховка</span>
+        </a>
+        <a href="event2.html" class="flex items-center gap-3 bg-white rounded-lg px-6 py-3 shadow-md hover:shadow-lg transition-shadow border border-gray-200 hover:border-purple-300">
+          <div class="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full"></div>
+          <span class="font-medium">Розлив нафти, Крим</span>
+        </a>
+        <a href="event3.html" class="flex items-center gap-3 bg-white rounded-lg px-6 py-3 shadow-md hover:shadow-lg transition-shadow border border-gray-200 hover:border-purple-300">
+          <div class="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full"></div>
+          <span class="font-medium">Пожежа в лісах Квебека</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Info -->
+    <div class="bg-gray-50 py-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="font-extrabold mb-4 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">Про дослідження</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-xl p-6 shadow-md">
+            <h3 class="mb-3">Супутникові знімки</h3>
+            <p class="text-gray-600">Використання оптичних супутникових знімків для візуального аналізу територій</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-md">
+            <h3 class="mb-3">SAR зображення</h3>
+            <p class="text-gray-600">Радарні знімки для аналізу незалежно від погодних умов та часу доби</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-md">
+            <h3 class="mb-3">Теплові знімки</h3>
+            <p class="text-gray-600">ІЧ-дані для виявлення температурних аномалій та змін екосистем</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-indigo-950 via-purple-950 to-indigo-950 text-white py-12 mt-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div>
+            <div class="flex items-center gap-2 mb-4">
+              <div class="w-6 h-6 rounded-full bg-white/20"></div>
+              <span class="font-bold">DATASTORM</span>
+            </div>
+            <p class="text-gray-300">Команда дослідників для NASA Space Apps Challenge 2024</p>
+          </div>
+          <div>
+            <h3 class="mb-4">Проєкт</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li>NASA Space Apps Challenge</li>
+              <li>Каховське водосховище</li>
+              <li>Супутниковий аналіз</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="mb-4">Технології</h3>
+            <ul class="space-y-2 text-gray-300">
+              <li>SAR зображення</li>
+              <li>Теплові знімки</li>
+              <li>Супутникові дані</li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-white/20 mt-8 pt-8 text-center text-gray-400">
+          <p>© 2024 DataStorm. Всі права захищені.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  </html>
+
+

@@ -1,7 +1,7 @@
 
-  # NASA Space Apps Challenge Site
+  # Website Layout for NASA Project
 
-  This is a code bundle for NASA Space Apps Challenge Site. The original project is available at https://www.figma.com/design/WdJzA9i4bmiNdlY3eSmPu2/NASA-Space-Apps-Challenge-Site.
+  This is a code bundle for Website Layout for NASA Project. The original project is available at https://www.figma.com/design/41yU9pJb3oT8q8HzDXyI8L/Website-Layout-for-NASA-Project.
 
   ## Running the code
 

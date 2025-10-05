@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DATASTORM — Подія 3</title>
+    <link rel="stylesheet" href="assets/styles/style.css" />
+  </head>
+  <body class="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+    <div class="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white py-4">
+      <div class="max-w-7xl mx-auto px-6">
+        <a href="main.html" class="inline-flex items-center gap-2 hover:opacity-80 transition-opacity">Повернутися на головну</a>
+      </div>
+    </div>
+    <div class="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white" style="padding-top: calc(16 * 0.25rem + 200px); padding-bottom: calc(16 * 0.25rem + 200px);">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="mb-4"><span class="inline-block bg-white/20 px-4 py-1 rounded-full text-shadow-sm">Подія 3</span></div>
+        <h1 class="font-extrabold mb-4 text-shadow-lg">Пожежа в лісах Квебека</h1>
+        <p class="max-w-3xl opacity-90 text-shadow-sm">Комплексне дослідження масштабної лісової пожежі в провінції Квебек, Канада. Аналіз включає визначення площі випалених територій, моніторинг розповсюдження вогню, теплове картографування активних осередків пожежі та оцінку довгострокових наслідків для лісових екосистем.</p>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <section class="mb-16">
+        <h2 class="mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-extrabold">Аналіз супутникових знімків</h2>
+        <div class="grid lg:grid-cols-[300px_1fr] gap-8">
+          <div class="space-y-3">
+            <button data-type="satellite" class="type-btn w-full p-4 rounded-lg border-2 transition-all border-purple-500 bg-purple-500/10">Просто фото з супутника</button>
+            <button data-type="sar" class="type-btn w-full p-4 rounded-lg border-2 transition-all border-gray-300 hover:border-purple-300">Фото зроблене за допомогою SAR</button>
+            <button data-type="thermal" class="type-btn w-full p-4 rounded-lg border-2 transition-all border-gray-300 hover:border-purple-300">Фото в тепловому діапазоні</button>
+          </div>
+          <div class="relative">
+            <div class="aspect-video rounded-lg overflow-hidden bg-gray-100">
+              <img id="carousel-image" src="https://images.unsplash.com/photo-1700081744390-53ac7df645ac?w=800" alt="satellite image 1" class="w-full h-full object-cover" />
+            </div>
+            <button id="prev" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white rounded-md px-3 py-2 shadow-md">‹</button>
+            <button id="next" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white rounded-md px-3 py-2 shadow-md">›</button>
+            <div id="counter" class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 text-white px-4 py-2 rounded-full">1 / 2</div>
+          </div>
+        </div>
+      </section>
+      <section class="mb-16">
+        <h2 class="mb-8 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent font-extrabold">Порівняння До/Після катастрофи</h2>
+        <div class="mb-4 flex items-center gap-3">
+          <input type="checkbox" id="overlay" />
+          <label for="overlay" class="cursor-pointer">Показати накладання зображень</label>
+        </div>
+        <div id="compare" class="relative aspect-video rounded-lg overflow-hidden bg-gray-100 cursor-ew-resize">
+          <img id="after" src="https://images.unsplash.com/photo-1631067280720-8ca7422e22c2?w=800" alt="Після катастрофи" class="absolute inset-0 w-full h-full object-cover" />
+          <div id="before-wrap" class="absolute inset-0" style="clip-path: inset(0 50% 0 0)">
+            <img id="before" src="https://images.unsplash.com/photo-1700081744390-53ac7df645ac?w=800" alt="До катастрофи" class="w-full h-full object-cover" />
+          </div>
+          <div id="slider" class="absolute top-0 bottom-0 w-1 bg-white shadow-lg" style="left:50%">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-lg flex items-center justify-center"><div class="w-4 h-4 border-l-2 border-r-2 border-gray-600"></div></div>
+          </div>
+          <div class="absolute top-4 left-4 bg-black/60 text-white px-3 py-1 rounded">До</div>
+          <div class="absolute top-4 right-4 bg-black/60 text-white px-3 py-1 rounded">Після</div>
+        </div>
+      </section>
+      <section class="mb-16">
+        <h2 class="mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-extrabold">Додатковий аналіз</h2>
+        <p class="text-gray-600">Додаткові матеріали та коментарі.</p>
+      </section>
+    </div>
+    <footer class="bg-gradient-to-r from-indigo-950 via-purple-950 to-indigo-950 text-white py-12 mt-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div>
+            <div class="flex items-center gap-2 mb-4"><div class="w-6 h-6 rounded-full bg-white/20"></div><span class="font-bold">DATASTORM</span></div>
+            <p class="text-gray-300">Команда дослідників для NASA Space Apps Challenge 2024</p>
+          </div>
+          <div>
+            <h3 class="mb-4">Проєкт</h3>
+            <ul class="space-y-2 text-gray-300"><li>NASA Space Apps Challenge</li><li>Каховське водосховище</li><li>Супутниковий аналіз</li></ul>
+          </div>
+          <div>
+            <h3 class="mb-4">Технології</h3>
+            <ul class="space-y-2 text-gray-300"><li>SAR зображення</li><li>Теплові знімки</li><li>Супутникові дані</li></ul>
+          </div>
+        </div>
+        <div class="border-t border-white/20 mt-8 pt-8 text-center text-gray-400"><p>© 2024 DataStorm. Всі права захищені.</p></div>
+      </div>
+    </footer>
+    <script src="static/event-page.js"></script>
+  </body>
+  </html>
+
+
