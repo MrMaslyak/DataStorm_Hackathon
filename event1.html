@@ -30,6 +30,7 @@
         src="img/kah/kah1.png"
         alt=""
         class="absolute inset-0 w-full h-full object-cover"
+        style="filter: brightness(60%);"
       />
       <div
         class="absolute inset-0 bg-gradient-to-r from-indigo-900/80 via-purple-900/70 to-pink-900/40"
@@ -42,64 +43,37 @@
           >
         </div>
         <h1 class="font-extrabold mb-4 text-shadow-lg">
-          Нова Каховка - центр міста
+          Nova Kahovka - city center
         </h1>
         <p class="max-w-3xl opacity-90 text-shadow-sm">
-          Детальний аналіз затоплення центральної частини міста Нова Каховка
-          після руйнування Каховської ГЕС. Дослідження включає порівняння
-          супутникових знімків до та після катастрофи, SAR зображення для
-          визначення рівня води та теплові знімки для оцінки екологічних
-          наслідків.
+A detailed analysis of the flooding of the central part of the city of Nova Kakhovka
+after the destruction of the Kakhovka hydroelectric power plant. The study includes a comparison of
+satellite images before and after the disaster, SAR images for
+determining water levels for assessing environmental
+consequences.
         </p>
       </div>
     </div>
     <div class="max-w-7xl mx-auto px-6 py-16">
       <section class="mb-16">
-        <h2
-          class="mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-extrabold"
-        >
-          У цьому проєкті ми досліджуємо наслідки руйнування Каховської ГЕС і
-          те, як ця подія змінила Каховське водосховище та прилеглі території.
-          Використовуючи супутникові радарні знімки (SAR), ми простежимо
-          динаміку рівня води, берегової лінії та затоплених зон — від
-          спокійного стану до катастрофічних змін після вибуху. Цей аналіз
-          унікальний тим, що показує водосховище як живу систему: ми зможемо
-          побачити, як воно виглядало в різні пори року, як розвивалися наслідки
-          руйнування і як з часом змінилася територія. Проєкт дозволяє «побачити
-          невидиме» — події, приховані від звичайних супутників і людського ока.
-        </h2>
-        <br />
-        <h2
-          class="mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-extrabold"
-        >
-          Історія
-        </h2>
-        <p
-          class="mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-extrabold"
-        >
-          Історія Каховське водосховище, побудоване в 1956 році на річці Дніпро
-          як частина ГЕС, займає площу приблизно 215 км², має довжину до 70 км і
-          ширину до 8 км. Воно забезпечує вироблення електроенергії, зрошення,
-          водопостачання та регулювання стоку, відіграючи важливу роль для
-          екосистеми та економіки регіону. У 2023 році на греблі стався вибух,
-          який призвів до руйнувань, підтоплення прилеглих територій і серйозних
-          наслідків для інфраструктури та навколишнього середовища.
-        </p>
-        <br />
-        <h2
-          class="mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-extrabold"
-        >
-          How to interpret SAR flood images?
-        </h2>
-        <p>blalbalbalbal</p>
-        <img src="img/kah/sar.jpg" alt="sar" />
-        <br />
 
         <h2
-          class="mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-extrabold"
+          class="mb-8 font-extrabold text-black"
         >
-          Аналіз супутникових знімків
+          History
         </h2>
+        <p
+        >
+Constructed in 1956 on the Dnieper River as part of the hydroelectric plant, the Kakhovka Reservoir covered an area of about 215 km², was up to 70 km long, and up to 8 km wide. It provided electricity generation, irrigation, water supply, and flow regulation, playing a vital role in the regional ecosystem and economy.
+In 2023, an explosion at the dam caused destruction, flooding of surrounding areas, and severe consequences for both infrastructure and the environment.
+        </p>
+        <br />
+
+
+        <h2
+          class="mb-8 font-extrabold text-black"
+        >
+SAR images clearly reflect the natural cycle of surface changes throughout the year.        </h2>
 
         <div class="grid lg:grid-cols-[300px_1fr] gap-8">
           <div class="space-y-3">
@@ -107,25 +81,25 @@
               data-type="satellite"
               class="type-btn w-full p-4 rounded-lg border-2 transition-all border-purple-500 bg-purple-500/10"
             >
-              Зима
+              Winter
             </button>
             <button
               data-type="sar"
               class="type-btn w-full p-4 rounded-lg border-2 transition-all border-gray-300 hover:border-purple-300"
             >
-              Весна
+              Spring
             </button>
             <button
               data-type="thermal"
               class="type-btn w-full p-4 rounded-lg border-2 transition-all border-gray-300 hover:border-purple-300"
             >
-              Літо
+              Summer
             </button>
             <button
               data-type="thermal"
               class="type-btn w-full p-4 rounded-lg border-2 transition-all border-gray-300 hover:border-purple-300"
             >
-              Осінь
+              Autumn
             </button>
 
             <script>
@@ -175,19 +149,25 @@
               />
             </div>
           </div>
-          <p>blablabl</p>
+          
         </div>
+        <p style="margin-top: 30px;">In winter (December–February), ice and snow create a heterogeneous pattern: smooth ice looks dark, while hummocks or snow on the surface appear bright. Dry snow hardly affects the backscatter, while wet snow or meltwater makes the surface darker.
+
+In spring (March–May), the water level is at its maximum due to snowmelt and rains — therefore rivers and floodplains on radar images appear dark and widened, while fields and forests look brighter because of the appearance of young vegetation.
+In summer (June–August), the water level drops, the river channel narrows, and light areas of dry soil and sand appear along the banks. At this time, vegetation reaches its peak, so agricultural fields and forests have the brightest response on SAR images.
+In autumn (September–November), after the harvest, the fields turn dark, as the signal from the smooth soil surface almost does not return to the satellite. Forested areas also become darker because of leaf fall.
+</p>
       </section>
       <section class="mb-16">
         <h2
-          class="mb-8 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent font-extrabold"
+          class="mb-8 font-extrabold text-black"
         >
-          Порівняння До/Після катастрофи
+          Comparing Before/after the catastrophe
         </h2>
         <div class="mb-4 flex items-center gap-3">
           <input type="checkbox" id="overlay" />
           <label for="overlay" class="cursor-pointer"
-            >Показати накладання зображень</label
+            >show picture overlay</label
           >
         </div>
         <div
@@ -226,19 +206,21 @@
           <div
             class="absolute top-4 left-4 bg-black/60 text-white px-3 py-1 rounded"
           >
-            До
+            Before
           </div>
           <div
             class="absolute top-4 right-4 bg-black/60 text-white px-3 py-1 rounded"
           >
-            Після
+            After
           </div>
         </div>
       </section>
       <section class="mb-16">
-        <p>blalbalbal</p>
+        <p style="margin-bottom: 40px;">After comparing two SAR images — before and after the destruction of the Kakhovka Hydroelectric Power Plant — significant changes in the water system and surrounding areas are clearly visible. In the “before” image, the water level in the reservoir remained stable: the Dnipro riverbed and water surface appeared as uniform dark areas with distinct shorelines. The coastal zones were narrow, without signs of flooding, and agricultural fields and settlements retained their usual structure and brightness depending on the season.
+In the “after” image, the situation changed dramatically. In the upper part, where the reservoir previously extended, a sharp shallowing is noticeable: the dark water surface significantly decreased, and in its place appeared large light areas — exposed bottom with sand and silt. Downstream, the opposite effect is observed — large-scale flooding. The river overflowed its banks, and vast areas of fields, riverside villages, and urban quarters turned into dark patches typical of water. Roads and infrastructure partly disappeared under flooded areas, and the structure of farmland changed: the flooded fields lost their characteristic texture and appear uniformly dark.
+</p>
         <h2
-          class="mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-extrabold"
+          class="mb-8 font-extrabold text-black"
         >
           Now
         </h2>
@@ -246,11 +228,31 @@
         <img src="img/kah/end.jpg" alt="" />
 
         <h2
-          class="mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-extrabold"
+          class="mb-8 font-extrabold text-black"
+          style="padding-top: 40px;"
         >
-          Додатковий аналіз
+              What is there now, conclusion of what SAR allowed us to detect (results of research and our hypotheses)
         </h2>
-        <p class="text-gray-600">Додаткові матеріали та коментарі.</p>
+        <p class="text-gray-600"> 
+Now in its place we observe a completely different picture:
+<ol></ol>
+<li>	Significant shallowing and disappearance of water — the image clearly shows light and gray areas corresponding to the exposed bottom (sand, silt, moist soil surface). This indicates that the water level dropped sharply.</li>
+<li>	Fragmented dark patches — remnants of water in the form of separate channels and small lakes in the former bed of the reservoir.</li>
+<li>	Change of shoreline — the river now occupies a much narrower strip than before the explosion.</li>
+<li>	Visibility of agricultural land and settlements — some fields and territories that were previously underwater or along its shore became clearly visible.</li>
+</ol></p>
+      </section>
+      <!-- Новая секция с SAR-анимацией -->
+      <section class="mb-16">
+        <div class="max-w-7xl mx-auto px-6">
+          <h2 class="mb-8 font-extrabold text-black">
+            SAR animation over a six-month period after the dam breach
+          </h2>
+          <p class="mb-8 text-gray-700">
+            SAR animation over a six-month period after the dam breach
+          </p>
+          <img src="img/kah/gif.gif" alt="SAR animation" class="rounded-lg shadow-lg" />
+        </div>
       </section>
     </div>
     <footer
@@ -293,4 +295,5 @@
     </footer>
     <script src="static/event-page.js"></script>
   </body>
+</html>
 </html>
