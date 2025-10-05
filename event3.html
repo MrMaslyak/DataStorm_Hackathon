@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DATASTORM — Подія 3</title>
+    <title>DATASTORM — Event 3</title>
     <link rel="stylesheet" href="assets/styles/style.css" />
   </head>
   <body class="min-h-screen bg-gradient-to-b from-slate-50 to-white">
@@ -14,33 +14,42 @@
         <a
           href="main.html"
           class="inline-flex items-center gap-2 hover:opacity-80 transition-opacity"
-          >Повернутися на головну</a
+          >Turn on your head</a
         >
       </div>
     </div>
     <div
-      class="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white"
+      class="relative text-white"
       style="
-        padding-top: calc(16 * 0.25rem + 200px);
-        padding-bottom: calc(16 * 0.25rem + 200px);
+        padding-top: calc(24 * 0.25rem + 200px);
+        padding-bottom: calc(24 * 0.25rem + 200px);
+        overflow: hidden;
       "
     >
-      <div class="max-w-7xl mx-auto px-6">
+      <img
+        src="img/event3/main.jpg"
+        alt=""
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-indigo-900/80 via-purple-900/70 to-pink-900/40"
+      ></div>
+      <div class="relative max-w-7xl mx-auto px-6">
         <div class="mb-4">
           <span
             class="inline-block bg-white/20 px-4 py-1 rounded-full text-shadow-sm"
-            >Подія 3</span
+            >Event 3</span
           >
         </div>
         <h1 class="font-extrabold mb-4 text-shadow-lg">
-          Пожежа в лісах Квебека
+          Fire in the forests of Quebec
         </h1>
         <p class="max-w-3xl opacity-90 text-shadow-sm">
-          Комплексне дослідження масштабної лісової пожежі в провінції Квебек,
-          Канада. Аналіз включає визначення площі випалених територій,
-          моніторинг розповсюдження вогню, теплове картографування активних
-          осередків пожежі та оцінку довгострокових наслідків для лісових
-          екосистем.
+          A comprehensive study of a large-scale forest fire in the province of
+          Quebec, Canada. The analysis includes determining the area of ​​burned
+          areas, monitoring the spread of fire, heat mapping of active fire
+          centers, and assessing the long-term consequences for forest
+          ecosystems.
         </p>
       </div>
     </div>
@@ -49,69 +58,125 @@
         <h2
           class="mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-extrabold"
         >
-          Аналіз супутникових знімків
+          In case of fires, SAR images respond to changes in surface and
+          vegetation. If the territory is engulfed in fire, the following
+          appears on the images: Before it gets too hot: forests, fields and
+          trees will look remarkably bright (the trees are very good at picking
+          up the radar signal). Before and after burning: the burnt surface
+          becomes smoother and is covered with a charcoal-black mass or ash.
+          Such a surface may not transmit the radar signal back to the
+          satellite, so the area on the SAR image appears dark.
         </h2>
+        <br />
+        <h2
+          class="mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-extrabold"
+        >
+          Satellite image analysis
+        </h2>
+
         <div class="grid lg:grid-cols-[300px_1fr] gap-8">
           <div class="space-y-3">
             <button
               data-type="satellite"
               class="type-btn w-full p-4 rounded-lg border-2 transition-all border-purple-500 bg-purple-500/10"
             >
-              Просто фото з супутника
+              Winter
             </button>
             <button
               data-type="sar"
               class="type-btn w-full p-4 rounded-lg border-2 transition-all border-gray-300 hover:border-purple-300"
             >
-              Фото зроблене за допомогою SAR
+              Spring
             </button>
             <button
               data-type="thermal"
               class="type-btn w-full p-4 rounded-lg border-2 transition-all border-gray-300 hover:border-purple-300"
             >
-              Фото в тепловому діапазоні
+              Summer
             </button>
+            <button
+              data-type="thermal"
+              class="type-btn w-full p-4 rounded-lg border-2 transition-all border-gray-300 hover:border-purple-300"
+            >
+              Autumn
+            </button>
+
+            <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                const buttons = document.querySelectorAll(".type-btn");
+                const image = document.getElementById("winter-image");
+
+                const images = {
+                  Winter: "img/event3/winter.jpg",
+                  Spring: "img/event3/spring.jpg",
+                  Summer: "img/event3/summer.jpg",
+                  Autumn: "img/event3/autumn.jpg",
+                };
+
+                if (!image) return;
+
+                buttons.forEach((btn) => {
+                  btn.addEventListener("click", () => {
+                    const text = btn.textContent.trim();
+                    const src = images[text] || Object.values(images)[0];
+
+                    const tmp = new Image();
+                    tmp.onload = () => {
+                      image.src = src;
+                    };
+                    tmp.src = src;
+
+                    buttons.forEach((b) =>
+                      b.classList.remove(
+                        "border-purple-500",
+                        "bg-purple-500/10"
+                      )
+                    );
+                    btn.classList.add("border-purple-500", "bg-purple-500/10");
+                  });
+                });
+              });
+            </script>
           </div>
           <div class="relative">
             <div class="aspect-video rounded-lg overflow-hidden bg-gray-100">
               <img
-                id="carousel-image"
-                src="https://images.unsplash.com/photo-1700081744390-53ac7df645ac?w=800"
+                id="winter-image"
+                src="img/event3/winter.jpg"
                 alt="satellite image 1"
-                class="w-full h-full object-cover"
+                class="1000 400 object-cover"
               />
             </div>
-            <button
-              id="prev"
-              class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white rounded-md px-3 py-2 shadow-md"
-            >
-              ‹
-            </button>
-            <button
-              id="next"
-              class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white rounded-md px-3 py-2 shadow-md"
-            >
-              ›
-            </button>
-            <div
-              id="counter"
-              class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 text-white px-4 py-2 rounded-full"
-            >
-              1 / 2
-            </div>
           </div>
+          <h2
+            class="mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-extrabold"
+          >
+            In winter, SAR images of forests are mostly gray or dark, although
+            they can appear lighter if the snow cover is uneven. During this
+            period, trees have no leaves, so the signal reflection is lower. If
+            there is snow on the branches, the signal is partially scattered,
+            giving the image a light-gray tone. In spring, the images become
+            brighter and more textured. This is due to the appearance of leaves
+            and increased soil moisture, which enhances the scattering of radio
+            waves. In summer, the forest appears medium-bright or bright and has
+            a pronounced texture. Tree canopies are dense and contain a lot of
+            moisture, so the forest strongly reflects the radar signal. The
+            image often looks heterogeneous and “fluffy.” In autumn, the images
+            gradually darken. Leaves fall, reducing signal reflection. However,
+            after rains, bright areas may appear due to increased soil moisture.
+          </h2>
         </div>
       </section>
       <section class="mb-16">
         <h2
           class="mb-8 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent font-extrabold"
         >
-          Порівняння До/Після катастрофи
+          Before/After the Disaster Comparison
         </h2>
         <div class="mb-4 flex items-center gap-3">
           <input type="checkbox" id="overlay" />
           <label for="overlay" class="cursor-pointer"
-            >Показати накладання зображень</label
+            >Show image overlays</label
           >
         </div>
         <div
@@ -120,7 +185,7 @@
         >
           <img
             id="after"
-            src="https://images.unsplash.com/photo-1631067280720-8ca7422e22c2?w=800"
+            src="img/event3/after.jpg"
             alt="Після катастрофи"
             class="absolute inset-0 w-full h-full object-cover"
           />
@@ -131,7 +196,7 @@
           >
             <img
               id="before"
-              src="https://images.unsplash.com/photo-1700081744390-53ac7df645ac?w=800"
+              src="img/event3/before.jpg"
               alt="До катастрофи"
               class="w-full h-full object-cover"
             />
@@ -150,12 +215,12 @@
           <div
             class="absolute top-4 left-4 bg-black/60 text-white px-3 py-1 rounded"
           >
-            До
+            Before
           </div>
           <div
             class="absolute top-4 right-4 bg-black/60 text-white px-3 py-1 rounded"
           >
-            Після
+            After
           </div>
         </div>
       </section>
@@ -163,9 +228,32 @@
         <h2
           class="mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-extrabold"
         >
-          Додатковий аналіз
+          “Before,” the forest appears heterogeneous and has a medium or bright
+          tone. This indicates dense tree canopies and high moisture content,
+          which strongly reflect the radar signal. In addition, dark areas are
+          visible, which are likely lakes or rivers, as water usually does not
+          reflect the signal back to the satellite. In the “After” image, the
+          scene has become noticeably darker and less textured, especially in
+          the central area. This is the main change. Burned trees and fallen
+          leaves reduce the reflection of the radar signal, making the terrain
+          appear darker.
         </h2>
-        <p class="text-gray-600">Додаткові матеріали та коментарі.</p>
+        <h2
+          class="mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-extrabold"
+        >
+          Now
+        </h2>
+
+        <img src="img/event3/now.jpg" alt="" />
+        <h2
+          class="mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-extrabold"
+        >
+          The surface appears mostly dark and uneven, with irregular dark
+          patches indicating burned areas that reflect the radar signal weakly.
+          Brighter spots suggest zones of moisture or partial vegetation
+          recovery. The texture remains heterogeneous, showing clear traces of
+          fire impact even two years later.
+        </h2>
       </section>
     </div>
     <footer
@@ -179,30 +267,30 @@
               <span class="font-bold">DATASTORM</span>
             </div>
             <p class="text-gray-300">
-              Команда дослідників для NASA Space Apps Challenge 2024
+              Team of researchers for NASA Space Apps Challenge 2025
             </p>
           </div>
           <div>
-            <h3 class="mb-4">Проєкт</h3>
+            <h3 class="mb-4">Project</h3>
             <ul class="space-y-2 text-gray-300">
               <li>NASA Space Apps Challenge</li>
-              <li>Каховське водосховище</li>
-              <li>Супутниковий аналіз</li>
+              <li>Kakhovka Reservoir</li>
+              <li>Satellite analysis</li>
             </ul>
           </div>
           <div>
-            <h3 class="mb-4">Технології</h3>
+            <h3 class="mb-4">Technology</h3>
             <ul class="space-y-2 text-gray-300">
-              <li>SAR зображення</li>
-              <li>Теплові знімки</li>
-              <li>Супутникові дані</li>
+              <li>SAR image</li>
+              <li>Thermal images</li>
+              <li>Satellite data</li>
             </ul>
           </div>
         </div>
         <div
           class="border-t border-white/20 mt-8 pt-8 text-center text-gray-400"
         >
-          <p>© 2025 DataStorm. Всі права захищені.</p>
+          <p>© 2025 DataStorm. All rights reserved.</p>
         </div>
       </div>
     </footer>
