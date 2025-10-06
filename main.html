@@ -131,7 +131,7 @@ Using satellite imagery from NASA and Sentinel-1, we analyze visual “before an
           />
         </div>
 
-        <!-- Event pins -->
+        <!-- Event pins
         <a
           href="event1.html"
           class="absolute group cursor-pointer"
@@ -228,41 +228,87 @@ Using satellite imagery from NASA and Sentinel-1, we analyze visual “before an
         </h2>
       </div>
       <div class="mt-8 flex flex-wrap gap-6 justify-center">
+        <!-- Фиолетовые ссылки закомментированы
+        <a
+          href="event1.html"
+          class="flex items-center gap-3 bg-white rounded-lg px-6 py-3 shadow-md hover:shadow-lg transition-shadow border border-gray-200 hover:border-purple-300"
+        >
+          <div
+            class="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full"
+          ></div>
+          <span class="font-medium">Nova Kakhovka</span>
+        </a>
+        -->
         <a
           href="event1.html"
           class="flex items-center gap-3 bg-white rounded-lg px-6 py-3 shadow-md hover:shadow-lg transition-shadow border border-gray-200"
-          style="border-left: 8px solid #06b6d4;"
+          style="border-left: 8px solid #06b6d4; position:relative;"
         >
-          <div
-            class="w-8 h-8 rounded-full"
-            style="background: linear-gradient(135deg, #22c55e 0%, #06b6d4 100%);"
-          ></div>
+          <span class="relative">
+            <span class="absolute inset-0 -m-2 pointer-events-none">
+              <span
+                class="w-12 h-12 rounded-full opacity-75"
+                style="background: linear-gradient(135deg, #22c55e 0%, #06b6d4 100%); animation: ping 1.5s cubic-bezier(0,0,.2,1) infinite;"
+              ></span>
+            </span>
+            <span
+              class="w-8 h-8 rounded-full relative"
+              style="background: linear-gradient(135deg, #22c55e 0%, #06b6d4 100%); display:inline-block;"
+            ></span>
+          </span>
           <span class="font-medium">Nova Kakhovka</span>
         </a>
         <a
           href="event2.html"
           class="flex items-center gap-3 bg-white rounded-lg px-6 py-3 shadow-md hover:shadow-lg transition-shadow border border-gray-200"
-          style="border-left: 8px solid #1e293b;"
+          style="border-left: 8px solid #1e293b; position:relative;"
         >
-          <div
-            class="w-8 h-8 rounded-full"
-            style="background: linear-gradient(135deg, #000 0%, #1e293b 100%);"
-          ></div>
+          <span class="relative">
+            <span class="absolute inset-0 -m-2 pointer-events-none">
+              <span
+                class="w-12 h-12 rounded-full opacity-75"
+                style="background: linear-gradient(135deg, #000 0%, #1e293b 100%); animation: ping 1.5s cubic-bezier(0,0,.2,1) infinite;"
+              ></span>
+            </span>
+            <span
+              class="w-8 h-8 rounded-full relative"
+              style="background: linear-gradient(135deg, #000 0%, #1e293b 100%); display:inline-block;"
+            ></span>
+          </span>
           <span class="font-medium">Oil spill, Crimea</span>
         </a>
         <a
           href="event3.html"
           class="flex items-center gap-3 bg-white rounded-lg px-6 py-3 shadow-md hover:shadow-lg transition-shadow border border-gray-200"
-          style="border-left: 8px solid #ea580c;"
+          style="border-left: 8px solid #ea580c; position:relative;"
         >
-          <div
-            class="w-8 h-8 rounded-full"
-            style="background: linear-gradient(135deg, #92400e 0%, #f59e42 100%);"
-          ></div>
+          <span class="relative">
+            <span class="absolute inset-0 -m-2 pointer-events-none">
+              <span
+                class="w-12 h-12 rounded-full opacity-75"
+                style="background: linear-gradient(135deg, #92400e 0%, #f59e42 100%); animation: ping 1.5s cubic-bezier(0,0,.2,1) infinite;"
+              ></span>
+            </span>
+            <span
+              class="w-8 h-8 rounded-full relative"
+              style="background: linear-gradient(135deg, #92400e 0%, #f59e42 100%); display:inline-block;"
+            ></span>
+          </span>
           <span class="font-medium">Fire in the forests of Quebec</span>
         </a>
       </div>
-    </div>
+      <style>
+        @keyframes ping {
+          75%, 100% {
+            transform: scale(2);
+            opacity: 0;
+          }
+          0% {
+            transform: scale(1);
+            opacity: .75;
+          }
+        }
+      </style>
 
     <!-- Info -->
     <div class="bg-gray-50 py-16">
